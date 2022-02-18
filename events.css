@@ -1,0 +1,264 @@
+/* --------------*/
+/* Page Set up */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a p {
+  display: block;
+}
+
+
+body {
+  background-color: white;
+}
+
+/*--------------------*/
+/*--------NavBar-------*/
+.navBar {
+  position: relative;
+  z-index: 1;
+}
+
+/*Floats each item to the left with padding of 14 & 16 px.
+Removes the underline with text decoration = none.*/
+.navBar a {
+  float: right;
+  color: grey;
+  padding: 25px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Lato;
+}
+
+.navBar .logo {
+  float: left;
+  padding: 1px 1px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.logo_image {
+  width: 150px;
+}
+
+/*Background color change during hover state*/
+.navBar a:hover {
+  background-color: white;
+  color: #000000;
+}
+
+/*Hides the menu Icon which will show when the nav needs to be responsive*/
+.navBar .icon {
+  display: none;
+}
+/*--------------------------------*/
+/*Event Heading*/
+.event p {
+  font-size: 30px;
+  position: relative;
+  font-family: Lato;
+  margin-left: 45%;
+  margin-top: 5px;
+  top: 90px;
+}
+/*---------------------------*/
+/*Descriptions*/
+.descrip1 h6 {
+  position: fixed;
+  margin-top:375px;
+  margin-left:24.5%;
+  font-size: 15px;
+}
+
+.descrip1 p {
+  position: fixed;
+  margin-top:415px;
+  margin-left:21.5%
+}
+
+.descrip2 h6 {
+  position: fixed;
+  margin-top:375px;
+  margin-left: 49.5%;
+  font-size: 15px
+}
+
+.descrip2 p {
+  position: fixed;
+  margin-top:415px;
+  margin-left: 47%;
+}
+
+.descrip3 h6 {
+  position: fixed;
+  margin-top: 375px;
+  margin-left:75%;
+  font-size: 15px
+}
+
+.descrip3 p {
+  position: fixed;
+  margin-top: 415px;
+  margin-left: 72.5%;
+}
+
+/*-----------------------------*/
+/*Pictures*/
+.images .event1 {
+  position: fixed;
+  width:300px;
+  margin-left: 5%;
+  margin-top: 145px;
+  height:auto;
+}
+
+.image2 .event2 {
+  position: fixed;
+  width: 300px;
+  margin-left: 30%;
+  margin-top:145px;
+  height:auto;
+}
+
+.image3 .event3 {
+  position: fixed;
+  width: 300px;
+  margin-left:55%;
+  margin-top:145px;
+  height:auto;
+}
+
+/*------------------------------*/
+/*Read more */
+.readmore a {
+  text-decoration: none;
+}
+
+.read1 {
+  position: fixed;
+  margin-left: 13%;
+  margin-top: 500px;
+}
+
+.read2 {
+  position: fixed;
+  margin-left: 38%;
+  margin-top: 500px;
+}
+
+.read3 {
+  position: fixed;
+  margin-left: 64%;
+  margin-top: 500px;
+}
+/*------------------------------*/
+@media (max-width: 700px){
+/*Ignores the first link (which is Home) in the div and applies 'display = none' to everything else.   Basically hiding everything but Home*/
+.navBar a:not(:first-child) {
+  display: none;
+}
+/*Brings the menu icon into view and floats it to the right*/
+.navBar a.icon {
+  display: block; float: right;
+}
+
+.navBar.responsive {
+  position: relative;
+}
+.navBar.responsive a.icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/*Removes the originally set float and brings them to view*/
+
+.navBar.responsive a {
+  float: none;
+  display: block;
+  text-align: right;
+}
+.navBar.responsive .logo {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+/*-----------------------------*/
+/*Event Heading*/
+/*.event p {
+  font-size: 30px;
+  position: relative;
+  font-family: Lato;
+  margin-left: 45%;
+  margin-top: 10px;
+  top: 90px;
+}*/
+
+/*---------------------------*/
+/*Descriptions*/
+/*.descrip1 h6 {
+  position: fixed;
+  margin-top:20px;
+  margin-left:25%;
+}
+
+.descrip1 p {
+  position: fixed;
+  margin-top:60px;
+  margin-left:21.5%
+}
+.descrip2 h6 {
+  position: relative;
+  margin-top:-80px;
+  margin-left: 50%;
+
+}
+.descrip2 p {
+  position: relative;
+  margin-bottom: 40px;
+  margin-left: 44%;
+
+}
+.descrip3 h6 {
+  position: relative;
+  margin-bottom: 40px;
+  margin-right:28%;
+}
+.descrip3 p {
+  position: relative;
+  margin-bottom: 35px;
+  margin-right: 25%;
+}*/
+
+/*-----------------------------*/
+/*Pictures*/
+/*.images .event1 {
+  position: fixed;
+  width:300px;
+  margin-left: 5%;
+  margin-top: 200px;
+  height:auto;
+}
+
+.image2 .event2 {
+  position: fixed;
+  width: 300px;
+  margin-left: 6%;
+  margin-top:200px;
+  height:auto;
+}
+
+.image3 .event3 {
+  position: fixed;
+  width: 300px;
+  margin-left:70%;
+  margin-top:-204px;
+  height:auto;
+}*/
+
+  /*---------------------------------------*/
+  /*Read more */
