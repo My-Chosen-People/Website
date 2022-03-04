@@ -1,0 +1,240 @@
+/*------------------------------------------------*/
+
+/*Page Setup*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------------------------------*/
+
+/*Font*/
+
+p,h1,h2,h3,h5,h6,a{
+  font-family: Lato;
+}
+.stories{
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: red;
+  text-underline-position: under;
+}
+
+/*------------------------------------------------*/
+
+/*Gridding*/
+
+.content1{
+  display: grid;
+  grid-column: 1fr;
+  grid-template-rows: 4rem 1fr;
+}
+
+.content1 .background{
+  grid-column: 0 / -1;
+  grid-row: 0 / -1;
+}
+
+.content1 .navBar{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/*------------------------------------------------*/
+
+/*Navbar Section*/
+
+.navBar{
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+/*Floats each item to the left with padding of 14 & 16 px.
+Removes the underline with text decoration = none.*/
+.navBar a{
+  float: right;
+  color: grey;
+  padding: 25px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Lato;
+}
+
+.navBar .logo{
+  float: left;
+  padding: 1px 1px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.logo_image{
+  width: 150px;
+}
+
+
+/*Background color change during hover state*/
+.navBar a:hover{
+  background-color: white;
+  color: #D12027;
+}
+
+/*Hides the menu Icon which will show when the nav needs to be responsive*/
+.navBar .icon{
+  display: none;
+}
+
+/*Set your custom screen width here replacing 700*/
+@media (max-width: 700px){
+/*Ignores the first link (which is Home) in the div and       applies 'display = none' to everything else.   Basically hiding everything but Home*/
+  .navBar a:not(:first-child){
+    display: none;
+  }
+/*Brings the menu icon into view and floats it to the right*/
+  .navBar a.icon{
+    display: block; float: right;
+  }
+
+/*The navBar class will be changed to 'navBar responsive' using JS. This chunk of CSS makes the menu icon stay where it is by making the position absolute within it's parent 'right top corner'. Without this, the icon will get kicked around when the items are collapsed and expanded*/
+  .navBar.responsive {
+    position: relative;
+  }
+  .navBar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+/*Removes the originally set float and brings them to view*/
+  .navBar.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+  .navBar.responsive .logo {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: white;
+}
+
+/*------------------------------------------------*/
+
+/*Background*/
+
+.background{
+  position: relative;
+  width: 100%;
+  height: 750px;
+  padding-top: -150px;
+}
+img {
+  width: 100%;
+}
+figure{
+    margin: 2.0em 0;
+}
+figcaption{
+    font-size: smaller;
+}
+.wrapper{
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  background-color: white;
+  background-position: top;
+
+  border-color: grey;
+
+  border-width: 4px;
+  border-radius: 2px;
+
+  box-shadow: 0.2em 0 2em grey;
+
+  display: inline-block;
+}
+.block_container{
+ margin-top: 50px;
+}
+
+/*------------------------------------------------*/
+
+/*Donation Button*/
+
+
+.viewMore{
+  position: absolute;
+  margin-left: 40%;
+  margin-top: -10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+
+  height: 45px;
+  width: 155px;
+
+  background: #D12027;
+
+  border: thin #D12027 solid;
+  border-radius: 30px;
+
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+
+  box-shadow: 0.2em 0 2em grey;
+}
+
+
+/*------------------------------------------------*/
+
+/*About Us Section*/
+
+
+.wrapper{
+  position: relative;
+  justify-content: flex-end;
+  margin-top: 50px;
+  margin-left: 25%;
+  width: 50%;
+  height: 50%;
+  padding-bottom: 50px;
+}
+
+/*------------------------------------------------*/
+
+/*Footer Section*/
+
+.footer{
+  position: static;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  margin-top: 100px;
+  background: #D12027;
+}
+
+.footer_text{
+  color: white;
+  padding-top: 50.0px;
+  padding-left: 100.0px;
+}
+
+.footer_details{
+  color: white;
+  padding-top: 1.0rem;
+  padding-left: 100.0px;
+  padding-bottom: 1.0rem;
+}
