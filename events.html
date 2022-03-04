@@ -1,55 +1,53 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="events.css">
-  <script src="home.js"></script>
-  <title> Events </title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="events.css">
+    <script src="home.js"></script>
+  </head>
 
-<body>
+  <body>
 
-  <!--- NavBar Section --->
-  
-<div class = "content1">
-  <div class="navBar" id="mainNavBar">
-    <a class="logo" href="#home"><img class="logo_image" src="images/navbar_image/Logo.png" alt="My Chosen People"></a>
-    <a  class ="about" href="#about">About</a>
-    <a  class="events" href="#events">Events</a>
-    <a class="stories"  href="#stories">Stories</a>
-    <a  href="javascript:void(0);" class="icon" onClick="openDrawerMenu()">&#9776;</a>
-  </div>
-  </div>
-  
-<!--- Event Section--->
+      <div class="content1">
+        <!--Navbar Section-->
+        <div class="navBar" id="mainNavBar">
+          <a class="logo" href="#home"><img class="logo_image" src="images/navbar_image/Logo.png" alt="My Chosen People"></a>
+          <a  href="#service">Stories</a>
+          <a  href="#about">Events</a>
+          <a  href="#contact">Home</a>
+          <a  href="javascript:void(0);" class="icon" onClick="openDrawerMenu()">&#9776;</a>
+        </div>
+      </div>
+
+<!--- Event Header--->
   <div class = "events">
     <h1 class ="event_header"> Events </h1>
+    </div>
+
+<!--- Event Section ---->
+
+    <div class="block_container">
+
+    <div class="wrapper">
+      <a class ="image"> <img class ="first_img" src="images/Image1.png" alt="Event 1"></a>
+      <h4 class="wrapper_title"> Event 1 </h4>
+      <p class="wrapper_description"> Event 1 Description </p>
+      <a class="read1" href="#"> Read More </a>
+    </div>
+    <div class="wrapper">
+      <a class ="image"> <img class ="second_img" src="images/Image2.png" alt="Event 2"></a>
+      <h4 class="wrapper_title"> Event 2 </h4>
+      <p class="wrapper_description"> Event 2 Description </p>
+      <a class="read2" href="#"> Read More </a>
+    </div>
+    <div class="wrapper">
+      <a class ="image"> <img class ="first_img" src="images/Image1.png" alt="Event 3"></a>
+      <h4 class="wrapper_title"> Event 3 </h4>
+      <p class="wrapper_description"> Event 3 Description </p>
+      <a class="read3" href="#"> Read More </a>
+    </div>
   </div>
-
-  <!--- Images/Description/Title --->
-  <div class ="block_container">
-
-      <div class="eventsec">
-        <a class ="image"> <img class ="event1" src="images/eventimg.jpeg" alt="Event 1"></a>
-        <h6 class="event_title"> Event 1 </h6>
-        <p class="event_description"> Event 1 Description </p>
-      </div>
-
-      <div class="eventsec">
-        <a class ="image"> <img class ="event1" src="images/eventimg.jpeg" alt="Event 1"></a>
-        <h6 class="event_title"> Event 2 </h6>
-        <p class="event_description"> Event 2 Description </p>
-      </div>
-
-      <div class="eventsec">
-        <a class ="image"> <img class ="event1" src="images/eventimg.jpeg" alt="Event 1"></a>
-        <h6 class="event_title"> Event 3 </h6>
-        <p class="event_description"> Event 3 Description </p>
-      </div>
-
-  </div>
-
-
-  </body>
+</body>
 </html>
