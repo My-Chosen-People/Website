@@ -1,5 +1,3 @@
-/*------------------------------------------------*/
-
 /*Page Setup*/
 
 *{
@@ -7,13 +5,13 @@
   padding: 0;
 }
 
-/*------------------------------------------------*/
-
 /*Font*/
 
 p,h1,h2,h3,h5,h6,a{
   font-family: Lato;
 }
+
+
 
 /*------------------------------------------------*/
 
@@ -21,14 +19,9 @@ p,h1,h2,h3,h5,h6,a{
 
 .content1{
   display: grid;
-  grid-column: 1fr;
-  grid-template-rows: 4rem 1fr;
+  grid-template-rows: 4rem 32rem 4rem;
 }
 
-.content1 .background{
-  grid-column: 0 / -1;
-  grid-row: 0 / -1;
-}
 
 .content1 .navBar{
   grid-column: 1;
@@ -37,19 +30,9 @@ p,h1,h2,h3,h5,h6,a{
 
 .content2{
   display: grid;
-  grid-column: 1;
-  grid-template-rows: 1fr 4rem 4rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.content2 .white_background{
-  grid-column: 0 / -1;
-  grid-row: 0 / -1;
-}
-
-.content2 .AboutTitle{
-  grid-column: 1;
+  height: 600px;
+  grid-template-rows: 10rem 5rem 5rem;
+  text-align: center;
 }
 
 /*------------------------------------------------*/
@@ -67,7 +50,6 @@ Removes the underline with text decoration = none.*/
   float: right;
   color: #3D3D3D;
   padding: 25px 16px;
-  text-decoration: none;
   font-size: 17px;
   font-family: Lato;
 }
@@ -83,8 +65,18 @@ Removes the underline with text decoration = none.*/
   width: 150px;
 }
 
-.navBar .home{
-  text-decoration: underline;
+.current_button{
+  text-decoration: underline #D12027 3px;
+  text-underline-position: under;
+}
+
+.navBar .current_button:hover{
+  background-color: #CFCFCF;
+  border-radius: 20px;
+  border-left: 50px;
+  opacity: 75%;
+  text-decoration: underline #D12027 3px;
+  text-underline-position: under;
 }
 
 /*Background color change during hover state*/
@@ -92,13 +84,18 @@ Removes the underline with text decoration = none.*/
   background-color: #CFCFCF;
   border-radius: 20px;
   border-left: 50px;
+  opacity: 75%;
+  text-decoration: none;
 }
 
-
+.navBar .button{
+  text-decoration: none;
+}
 
 /*Hides the menu Icon which will show when the nav needs to be responsive*/
 .navBar .icon{
   display: none;
+  text-decoration: none;
 }
 
 /*Set your custom screen width here replacing 700*/
@@ -147,7 +144,6 @@ Removes the underline with text decoration = none.*/
 
 /*Background*/
 
-
 .background{
   position: relative;
   width: 100%;
@@ -155,16 +151,15 @@ Removes the underline with text decoration = none.*/
   margin-top: -62px;
 }
 
-
 /*------------------------------------------------*/
 
 /*Donation Button*/
 
-
 .donationLink{
-  position: absolute;
-  margin-left: 43%;
-  margin-top: -100px;
+  position: relative;
+  margin: auto;
+  grid-row: 3;
+
 
   display: flex;
   justify-content: center;
@@ -174,66 +169,63 @@ Removes the underline with text decoration = none.*/
 
   height: 45px;
   width: 155px;
-
   background: #D12027;
-
   border: thin #D12027 solid;
   border-radius: 30px;
 
   font-size: 18px;
   font-weight: bold;
   color: white;
-
   box-shadow: 0.2em 0 2em grey;
+  z-index: 2;
 }
-
 
 /*------------------------------------------------*/
 
 /*About Us Section*/
 
-.white_background{
+.AboutUs_Wrapper{
   background-color: white;
-  width: 60%;
-  height: 50px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-left: 18%;
+  width: 70%;
+  margin: auto;
+  grid-row: 2;
 }
 
 .AboutTitle{
-  margin-left: 42%;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
-
-.AboutText{
-  margin-left: 20%;
-}
-
-.wrapper{
-  position: relative;
-  justify-content: flex-end;
-  margin-top: 50px;
-  margin-left: 25%;
-  width: 50%;
-  height: 50%;
-  padding-bottom: 50px;
-}
-
-
 
 /*------------------------------------------------*/
 
 /*Footer Section*/
 
 .footer{
-  position: static;
-  bottom: 0;
+  display: grid;
+  justify-content: space-around;
+  grid-template-rows: 4rem 4rem 4rem;
   width: 100%;
   height: 250px;
   background: #D12027;
 }
 
+.footer_content1{
+  position: relative;
+  right: 8%;
+  grid-row: 2;
+}
+
+.footer_content2{
+  position: relative;
+  right: 42%;
+  grid-row: 2;
+}
 .footer_text{
   color: white;
+}
+
+.facebook_button{
+  padding-top: 10px;
+}
+.phone_button{
+  padding-left: 10px;
 }
