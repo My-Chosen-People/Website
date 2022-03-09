@@ -16,6 +16,7 @@ p,h1,h2,h3,h5,h6,a{
 }
 
 .events {
+  padding-top: 50px;
   text-align: center;
 }
 
@@ -47,7 +48,6 @@ p,h1,h2,h3,h5,h6,a{
 /*Navbar Section*/
 
 .navBar{
-  background-color: #fff;
   position: relative;
   z-index: 1;
 }
@@ -56,9 +56,8 @@ p,h1,h2,h3,h5,h6,a{
 Removes the underline with text decoration = none.*/
 .navBar a{
   float: right;
-  color: grey;
+  color: #3D3D3D;
   padding: 25px 16px;
-  text-decoration: none;
   font-size: 17px;
   font-family: Lato;
 }
@@ -74,16 +73,37 @@ Removes the underline with text decoration = none.*/
   width: 150px;
 }
 
+.current_button{
+  text-decoration: underline #D12027 3px;
+  text-underline-position: under;
+}
+
+.navBar .current_button:hover{
+  background-color: #CFCFCF;
+  border-radius: 20px;
+  border-left: 50px;
+  opacity: 75%;
+  text-decoration: underline #D12027 3px;
+  text-underline-position: under;
+}
 
 /*Background color change during hover state*/
-.navBar a:hover{
-  background-color: white;
-  color: #D12027;
+.navBar .button:hover{
+  background-color: #CFCFCF;
+  border-radius: 20px;
+  border-left: 50px;
+  opacity: 75%;
+  text-decoration: none;
+}
+
+.navBar .button{
+  text-decoration: none;
 }
 
 /*Hides the menu Icon which will show when the nav needs to be responsive*/
 .navBar .icon{
   display: none;
+  text-decoration: none;
 }
 
 /*Set your custom screen width here replacing 700*/
@@ -122,7 +142,7 @@ Removes the underline with text decoration = none.*/
 
 .navbar{
   position: fixed;
-  top: 0;
+  top: 50px;
   width: 100%;
   height: 50px;
   background: white;
@@ -132,13 +152,16 @@ Removes the underline with text decoration = none.*/
 
 /*Background*/
 
-.background{
-  position: relative;
-  width: 100%;
-  height: 750px;
-  padding-top: -150px;
+.block_container{
+  width: 70%;
+  height: auto;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px;
 }
-img {
+
+.holder_img{
   width: 100%;
 }
 figure{
@@ -152,10 +175,11 @@ figcaption{
 .wrapper{
   width: 330px;
   height: 330px;
-  padding: 5px;
+  margin: auto;
+  margin-top: 50px;
+  margin-left: 1.5%;
   background-color: white;
   background-position: top;
-  margin-left: 6.5%;
   display: inline-block;
 }
 
@@ -170,12 +194,10 @@ figcaption{
   text-align: center;
 }
 
-.read1 {
+.readMore_button {
   padding-left: 25px;
   padding-right: 25px;
-  margin-left: 30%;
-  margin-top: auto;
-
+  margin: auto;
 
   display: flex;
   justify-content: center;
@@ -198,61 +220,43 @@ figcaption{
   box-shadow: 0.2em 0 2em grey;
 }
 
-.read2 {
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-left: 30%;
-  margin-top: auto;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-decoration: none;
-
-  height: 45px;
-  width: 100px;
-
-  background: #D12027;
-
-  border: thin #D12027 solid;
-  border-radius: 30px;
-
-  font-size: 15px;
-  font-weight: bold;
-  color: white;
-
-  box-shadow: 0.2em 0 2em grey;
-}
-
-.read3 {
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-left: 30%;
-  margin-top: auto;
-
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-decoration: none;
-
-  height: 45px;
-  width: 100px;
-
-  background: #D12027;
-
-  border: thin #D12027 solid;
-  border-radius: 30px;
-
-  font-size: 15px;
-  font-weight: bold;
-  color: white;
-
-  box-shadow: 0.2em 0 2em grey;
-}
 
 .block_container{
  margin-top: 50px;
+}
+
+/* -----------------------------------*/
+
+/* Footer Section */
+
+.footer{
+  display: grid;
+  justify-content: space-around;
+  grid-template-rows: 4rem 4rem 4rem;
+  width: 100%;
+  height: 250px;
+  background: #D12027;
+}
+
+.footer_content1{
+  position: relative;
+  right: 8%;
+  grid-row: 2;
+}
+
+.footer_content2{
+  position: relative;
+  right: 42%;
+  grid-row: 2;
+}
+.footer_text{
+  color: white;
+}
+
+.facebook_button{
+  padding-top: 10px;
+}
+.phone_button{
+  padding-left: 10px;
 }
