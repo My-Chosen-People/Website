@@ -1,0 +1,202 @@
+/*Page Setup*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*Font*/
+
+p,h1,h2,h3,h5,h6,a{
+  font-family: Lato;
+}
+
+a:hover{
+  opacity: 70%;
+}
+
+
+
+/*------------------------------------------------*/
+
+/*Gridding*/
+
+.content1{
+  display: grid;
+  grid-template-rows: 4rem 12rem 4rem 8rem 8rem 4rem;
+}
+
+
+.content1 .navBar{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.content2{
+  display: grid;
+  height: 600px;
+  grid-template-rows: 10rem 5rem 5rem;
+  text-align: center;
+}
+
+/*------------------------------------------------*/
+
+/*Navbar Section*/
+
+.navBar{
+  position: relative;
+  z-index: 1;
+}
+
+/*Floats each item to the left with padding of 14 & 16 px.
+Removes the underline with text decoration = none.*/
+.navBar a{
+  float: right;
+  color: #3D3D3D;
+  padding: 25px 16px;
+  font-size: 17px;
+  font-family: Lato;
+}
+
+.navBar a:hover{
+  opacity: 60%;
+  color: black;
+}
+
+
+.navBar .logo{
+  float: left;
+  padding: 1px 1px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.logo_image{
+  width: 150px;
+}
+
+.current_button{
+  text-decoration: underline #D12027 3px;
+  text-underline-position: under;
+}
+
+.navBar .current_button:hover{
+  background-color: #CFCFCF;
+  border-radius: 20px;
+  border-left: 50px;
+  opacity: 75%;
+  text-decoration: underline #D12027 3px;
+  text-underline-position: under;
+}
+
+/*Background color change during hover state*/
+
+
+/*Hides the menu Icon which will show when the nav needs to be responsive*/
+.navBar .icon{
+  display: none;
+  text-decoration: none;
+}
+
+/*Set your custom screen width here replacing 700*/
+@media (max-width: 700px){
+/*Ignores the first link (which is Home) in the div and       applies 'display = none' to everything else.   Basically hiding everything but Home*/
+  .navBar a:not(:first-child){
+    display: none;
+  }
+/*Brings the menu icon into view and floats it to the right*/
+  .navBar a.icon{
+    display: block; float: right;
+  }
+
+/*The navBar class will be changed to 'navBar responsive' using JS. This chunk of CSS makes the menu icon stay where it is by making the position absolute within it's parent 'right top corner'. Without this, the icon will get kicked around when the items are collapsed and expanded*/
+  .navBar.responsive {
+    position: relative;
+  }
+  .navBar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+/*Removes the originally set float and brings them to view*/
+  .navBar.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+  .navBar.responsive .logo {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.navbar{
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  height: 50px;
+  background: white;
+}
+
+.navBar .passive{
+  text-decoration: none;
+}
+
+.navBar .passive:hover{
+  text-decoration: none;
+  background-color: #CFCFCF;
+  border-radius: 20px;
+  border-left: 50px;
+  opacity: 75%;
+}
+
+
+/*------------------------------------------------*/
+
+/*Background*/
+
+.background{
+  position: relative;
+  width: 100%;
+  height: 750px;
+  margin-top: -62px;
+}
+
+/*------------------------------------------------*/
+
+.quote{
+  padding-top: 150px;
+  position: relative;
+  margin: auto;
+
+  grid-row: 3;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #3D3D3D;
+}
+
+
+.footer{
+  margin-top: 330px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #D12027;
+}
+
+.footer_text{
+  margin-left: 20px;
+  margin-top: 55px;
+  color: white;
+}
+
+.button_group{
+  margin-left: 20px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
