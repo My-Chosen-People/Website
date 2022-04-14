@@ -170,7 +170,7 @@ Removes the underline with text decoration = none.*/
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 200px;
 
   grid-row: 3;
   z-index: 1;
