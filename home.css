@@ -167,15 +167,13 @@ Removes the underline with text decoration = none.*/
 /*------------------------------------------------*/
 
 .quote{
-  position: relative;
-  margin: auto;
-
-  grid-row: 3;
-  z-index: 1;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 150px;
+
+  grid-row: 3;
+  z-index: 1;
 
   color: #3D3D3D;
 }
